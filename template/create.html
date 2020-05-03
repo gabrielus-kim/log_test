@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>web</title>
+        <meta charset='utf-8'>
+    </head>
+    <body>
+        <h1><a href='/'>Welcome Python</a></h1>
+        <a href='/create'>내용 추가</a>
+        <a href='/delete/{{ id }}'>내용 삭제</a><br><br> 
+    <h2>Create</h2>
+        <form action="/create" method="post">
+            <p><input type="text" name="title" placeholder="title"></p>
+            <p><textarea name="desc" placeholder="description"></textarea></p>
+            <button type="submit">제출</button>
+        </form>
+
+
+        <ol>
+            {{ menu | safe }}
+        </ol>
+        <h3>{{ title }}</h3>
+        {{ description }}
+
+
+        <br><a href='/login'>  login  </a>
+        <a href='/logout'>logout</a><br><br>
+        <a href='/join'> 회원 가입 </a>
+        <a href='/withdraw'>회원 탈퇴</a>
+        <br>
+
+        {{ message }}
+
+    </body>
+</html>
